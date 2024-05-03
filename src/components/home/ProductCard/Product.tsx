@@ -15,6 +15,9 @@ interface IProductProps {
   productName: string;
   des: string;
   color: string;
+  inStock?: boolean;
+  category?: string[];
+  content?: string;
 }
 
 const Product = (props: IProductProps) => {

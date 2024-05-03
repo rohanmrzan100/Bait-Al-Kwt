@@ -1,14 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
+import { useState } from "react";
 
 const Contact = () => {
-  const location = useLocation();
-  const [prevLocation, setPrevLocation] = useState("");
-  useEffect(() => {
-    setPrevLocation(location.state.data);
-  }, [location]);
-
   const [clientName, setclientName] = useState("");
   const [email, setEmail] = useState("");
   const [messages, setMessages] = useState("");
@@ -65,7 +57,6 @@ const Contact = () => {
 
   return (
     <div className="max-w-container mx-auto px-4">
-      <Breadcrumbs title="Contact" prevLocation={prevLocation} />
       {successMsg ? (
         <p className="pb-20 w-96 font-medium text-green-500">{successMsg}</p>
       ) : (

@@ -1,16 +1,15 @@
 import {
   createBrowserRouter,
-  RouterProvider,
-  Outlet,
   createRoutesFromElements,
+  Outlet,
   Route,
+  RouterProvider,
   ScrollRestoration,
 } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import FooterBottom from "./components/Footer/FooterBottom";
 import Header from "./components/Header/Header";
 import HeaderBottom from "./components/Header/HeaderBottom";
-import SpecialCase from "./components/SpecialCase/SpecialCase";
 import About from "./pages/About/About";
 import SignIn from "./pages/Account/SignIn";
 import SignUp from "./pages/Account/SignUp";
@@ -18,11 +17,11 @@ import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Payment from "./pages/payment/Payment";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Shop from "./pages/Shop/Shop";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const Layout = () => {
   return (

@@ -27,48 +27,48 @@ const SignUp = () => {
   // ============= Error Msg End here ===================
   const [successMsg, setSuccessMsg] = useState("");
   // ============= Event Handler Start here =============
-  const handleName = (e) => {
+  const handleName = (e: any) => {
     setClientName(e.target.value);
     setErrClientName("");
   };
-  const handleEmail = (e) => {
+  const handleEmail = (e: any) => {
     setEmail(e.target.value);
     setErrEmail("");
   };
-  const handlePhone = (e) => {
+  const handlePhone = (e: any) => {
     setPhone(e.target.value);
     setErrPhone("");
   };
-  const handlePassword = (e) => {
+  const handlePassword = (e: any) => {
     setPassword(e.target.value);
     setErrPassword("");
   };
-  const handleAddress = (e) => {
+  const handleAddress = (e: any) => {
     setAddress(e.target.value);
     setErrAddress("");
   };
-  const handleCity = (e) => {
+  const handleCity = (e: any) => {
     setCity(e.target.value);
     setErrCity("");
   };
-  const handleCountry = (e) => {
+  const handleCountry = (e: any) => {
     setCountry(e.target.value);
     setErrCountry("");
   };
-  const handleZip = (e) => {
+  const handleZip = (e: any) => {
     setZip(e.target.value);
     setErrZip("");
   };
   // ============= Event Handler End here ===============
   // ================= Email Validation start here =============
-  const EmailValidation = (email) => {
+  const EmailValidation = (email: string) => {
     return String(email)
       .toLowerCase()
       .match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);
   };
   // ================= Email Validation End here ===============
 
-  const handleSignUp = (e) => {
+  const handleSignUp = (e: any) => {
     e.preventDefault();
     if (checked) {
       if (!clientName) {
@@ -134,13 +134,13 @@ const SignUp = () => {
       <div className="w-1/2 hidden lgl:inline-flex h-full text-white">
         <div className="w-[450px] h-full bg-primeColor px-10 flex flex-col gap-6 justify-center">
           <Link to="/">
-            <img src={logoLight} alt="logoImg" className="w-28" />
+            <h1 className="text-3xl font-bold gold">Bait Al Kuwait</h1>
           </Link>
           <div className="flex flex-col gap-1 -mt-1">
             <h1 className="font-titleFont text-xl font-medium">
-              Get started for free
+              Stay sign in for more
             </h1>
-            <p className="text-base">Create your account to access more</p>
+            <p className="text-base">When you sign in, you are with us!</p>
           </div>
           <div className="w-[300px] flex items-start gap-3">
             <span className="text-green-500 mt-1">
@@ -148,7 +148,7 @@ const SignUp = () => {
             </span>
             <p className="text-base text-gray-300">
               <span className="text-white font-semibold font-titleFont">
-                Get started fast with OREBI
+                Get started fast with Bait Al Kuwait
               </span>
               <br />
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab omnis
@@ -161,7 +161,7 @@ const SignUp = () => {
             </span>
             <p className="text-base text-gray-300">
               <span className="text-white font-semibold font-titleFont">
-                Access all OREBI services
+                Access all services
               </span>
               <br />
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab omnis
@@ -182,9 +182,11 @@ const SignUp = () => {
             </p>
           </div>
           <div className="flex items-center justify-between mt-10">
-            <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
-              © OREBI
-            </p>
+            <Link to="/">
+              <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
+                © Bait Al Kuwait
+              </p>
+            </Link>
             <p className="text-sm font-titleFont font-semibold text-gray-300 hover:text-white cursor-pointer duration-300">
               Terms
             </p>
@@ -241,7 +243,7 @@ const SignUp = () => {
                 {/* Email */}
                 <div className="flex flex-col gap-.5">
                   <p className="font-titleFont text-base font-semibold text-gray-600">
-                    Work Email
+                     Email
                   </p>
                   <input
                     onChange={handleEmail}
@@ -379,7 +381,7 @@ const SignUp = () => {
                     type="checkbox"
                   />
                   <p className="text-sm text-primeColor">
-                    I agree to the OREBI{" "}
+                    I agree to the Bait Al Kuwait{" "}
                     <span className="text-blue-500">Terms of Service </span>and{" "}
                     <span className="text-blue-500">Privacy Policy</span>.
                   </p>
@@ -395,7 +397,7 @@ const SignUp = () => {
                   Create Account
                 </button>
                 <p className="text-sm text-center font-titleFont font-medium">
-                  Don't have an Account?{" "}
+                  Already have an Account?{" "}
                   <Link to="/signin">
                     <span className="hover:text-blue-600 duration-300">
                       Sign in
